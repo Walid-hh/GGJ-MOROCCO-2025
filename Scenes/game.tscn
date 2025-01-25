@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c1meriqm20ogh" path="res://Scenes/map.tscn" id="4_0brjd"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qwipi"]
+distance = 2.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fa22t"]
 size = Vector2(441.5, 20)
@@ -19,20 +20,21 @@ position = Vector2(343, 121)
 script = ExtResource("2_8okrb")
 
 [node name="Bubble" parent="BubbleSpawner" instance=ExtResource("2_y1op0")]
-position = Vector2(335, 172)
+position = Vector2(312, 267)
 
 [node name="Player" parent="." instance=ExtResource("1_wcimc")]
-position = Vector2(287, 171)
+position = Vector2(293, 305)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(287, 230)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(4, 87)
 shape = SubResource("WorldBoundaryShape2D_qwipi")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2(251, 35)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(99, 21)
+position = Vector2(108, 114)
 shape = SubResource("RectangleShape2D_fa22t")
