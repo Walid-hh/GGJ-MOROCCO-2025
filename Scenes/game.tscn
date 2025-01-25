@@ -1,3 +1,34 @@
-[gd_scene format=3 uid="uid://beunn8jr1a8d2"]
+[gd_scene load_steps=6 format=3 uid="uid://beunn8jr1a8d2"]
+
+[ext_resource type="PackedScene" uid="uid://im8hms28x3f7" path="res://Scenes/player.tscn" id="1_wcimc"]
+[ext_resource type="Script" path="res://Scripts/bubble_spawner.gd" id="2_8okrb"]
+[ext_resource type="PackedScene" uid="uid://m78ga2btv7i0" path="res://Scenes/Bubble.tscn" id="2_y1op0"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qwipi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fa22t"]
+size = Vector2(323, 20)
 
 [node name="Game" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_wcimc")]
+position = Vector2(287, 171)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(287, 230)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_qwipi")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2(251, 35)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(36, 1)
+shape = SubResource("RectangleShape2D_fa22t")
+
+[node name="BubbleSpawner" type="Node2D" parent="."]
+script = ExtResource("2_8okrb")
+
+[node name="Bubble" parent="BubbleSpawner" instance=ExtResource("2_y1op0")]
+position = Vector2(335, 172)
