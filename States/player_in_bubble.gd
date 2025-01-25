@@ -1,20 +1,21 @@
 extends State
 class_name PlayerInBubble
-@onready var player: CharacterBody2D = $"../.."
+@onready var player: CharacterBody2D = $"../../../Player"
 @onready var bubble: Area2D = $"../../../BubbleSpawner/Bubble"
 const SPEED := 100.0
 var collision : KinematicCollision2D
 
 func enter():
+	if is_instance_valid(get_node("../../../BubbleSpawner/Bubble")):
+		bubble = get_node("../../../BubbleSpawner/Bubble")
 	print("player in bubble")
 	player.playercollision.connect(_on_collision.bind(collision))
 func exit():
 	pass
 
 func update(delta : float):
-	#if get_node("../../../BubbleSpawner/Bubble") != null and bubble == null :
-		#bubble = get_node("../../../BubbleSpawner/Bubble")
 	pass
+
 func physics_update(_delta : float):
 	if !player.is_on_floor():
 		player.velocity.y = -1

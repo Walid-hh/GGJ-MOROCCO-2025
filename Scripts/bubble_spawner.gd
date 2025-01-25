@@ -13,13 +13,15 @@ func _process(delta: float) -> void:
 	if !is_instance_valid(bubble):
 		if bubble_spawned == false:
 			_spawn_bubble()
+			
 	
 func _spawn_bubble() -> void :
 	var bubble_instance = bubble_scene.instantiate()
 	bubble_instance.position = bubble_initial_position
 	add_child(bubble_instance)
+	bubble = bubble_instance
 	print("bubble spawned")
-	bubble_spawned = true
+	
 
 
 
