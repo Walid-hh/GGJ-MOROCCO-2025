@@ -1,14 +1,18 @@
 extends State
 class_name PlayerNormal
 @onready var player: CharacterBody2D = $"../../../Player"
+@onready var slime_sprite: AnimatedSprite2D = $"../../SlimeSprite"
 @onready var bubble: Area2D = $"../../../BubbleSpawner/Bubble"
+@onready var dash_bubble: Area2D = $"../../../BubbleSpawner/DashBubble"
+
 const SPEED = 100
 const JUMP_VELOCITY = -300.0
 
 func enter():
 
 	print("normal")
-	bubble.body_entered.connect(_slime_entered)
+	bubble.body_entered.connect(_slime_entered_bubble)
+	dash_bubble.body_entered.connect(_slime_entered_dash_bubble)
 	
 func physics_update(delta: float) -> void:
 	# Add the gravity.
@@ -18,6 +22,7 @@ func physics_update(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") and player.is_on_floor():
 		player.velocity.y = JUMP_VELOCITY
+		slime_sprite.play("jump")
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -33,12 +38,16 @@ func update(delta : float):
 	if get_node("../../../BubbleSpawner/Bubble") != null and bubble == null :
 		bubble = get_node("../../../BubbleSpawner/Bubble")
 		print("new bubble")
-		bubble.body_entered.connect(_slime_entered)
-
-func _slime_entered(_body_that_entered : CharacterBody2D) -> void :
+		bubble.body_entered.connect(_slime_entered_bubble)
+	if get_node("../../../BubbleSpawner/DashBubble") != null and dash_bubble == null :
+		dash_bubble = get_node("../../../BubbleSpawner/DashBubble")
+		print("new dashbubble")
+		dash_bubble.body_entered.connect(_slime_entered_dash_bubble)
+		
+func _slime_entered_bubble(_body_that_entered : CharacterBody2D) -> void :
 	print("slime_entered")
 	#removing the signal before changing states
-	bubble.body_entered.disconnect(_slime_entered)
+	bubble.body_entered.disconnect(_slime_entered_bubble)
 	#places the player in the center of the bubble
 	player.position = bubble.position + Vector2(0,-5)
 	#making the bubble a child of the player
@@ -46,6 +55,16 @@ func _slime_entered(_body_that_entered : CharacterBody2D) -> void :
 	#changing the state to PlayerInBubble
 	Transitioned.emit(self ,"PlayerInBubble")
 
+func _slime_entered_dash_bubble(_body_that_entered : CharacterBody2D) -> void :
+	print("slime_entered")
+	dash_bubble.body_entered.disconnect(_slime_entered_dash_bubble)
+	player.position = dash_bubble.position + Vector2(0,-5)
+	call_deferred("_reparent_dash_bubble")
+	Transitioned.emit(self ,"PlayerInDashBubble")
+
+
 func _reparent_bubble() -> void :
 	bubble.reparent(player , true)
-	
+
+func _reparent_dash_bubble() -> void :
+	dash_bubble.reparent(player , true)
