@@ -11,9 +11,10 @@ func enter():
 func exit():
 	pass
 
-func update(_delta : float):
+func update(delta : float):
+	#if get_node("../../../BubbleSpawner/Bubble") != null and bubble == null :
+		#bubble = get_node("../../../BubbleSpawner/Bubble")
 	pass
-
 func physics_update(_delta : float):
 	if !player.is_on_floor():
 		player.velocity.y = -1

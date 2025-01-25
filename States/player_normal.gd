@@ -1,13 +1,12 @@
 extends State
 class_name PlayerNormal
-@onready var player: CharacterBody2D = $"../.."
+@onready var player: CharacterBody2D = $"../../../Player"
 @onready var bubble: Area2D = $"../../../BubbleSpawner/Bubble"
-
 const SPEED = 100
 const JUMP_VELOCITY = -300.0
 
 func enter():
-	print(bubble)
+
 	print("normal")
 	bubble.body_entered.connect(_slime_entered)
 	
@@ -30,6 +29,11 @@ func physics_update(delta: float) -> void:
 
 	player.move_and_slide()
 
+func update(delta : float):
+	if get_node("../../../BubbleSpawner/Bubble") != null and bubble == null :
+		bubble = get_node("../../../BubbleSpawner/Bubble")
+		print("new bubble")
+		bubble.body_entered.connect(_slime_entered)
 
 func _slime_entered(_body_that_entered : CharacterBody2D) -> void :
 	print("slime_entered")
