@@ -3,8 +3,12 @@ class_name PlayerInDashBubble
 @onready var player: CharacterBody2D = $"../../../Player"
 @onready var dash_bubble: Area2D = $"../../../BubbleSpawner/DashBubble"
 @onready var slime_sprite: AnimatedSprite2D = $"../../SlimeSprite"
-const SPEED := 100
+const SPEED := 500
+const DASH_SPEED := 3000
 var collision : KinematicCollision2D
+var direction : Vector2
+var dash_timer : Timer
+var dash_access := true
 
 func enter():
 	if is_instance_valid(get_node("../../../BubbleSpawner/DashBubble")):
@@ -13,17 +17,31 @@ func enter():
 	player.playercollision.connect(_on_collision.bind(collision))
 	slime_sprite.stop()
 	slime_sprite.play("Idle")
+	dash_timer = Timer.new()
+	add_child(dash_timer)
+	dash_timer.one_shot = true
+	dash_timer.timeout.connect(_dash_access)
 
 func physics_update(_delta : float):
 	if !player.is_on_floor():
-		player.velocity.y = 0
-	if Input.is_action_just_pressed("move_left") :
-		var dash_direction := Vector2(-1 , 0)
-		player.position += dash_direction * SPEED * _delta
-		dash_direction = Vector2(0 , 0)
+		player.velocity = Vector2(0 , 0)
+	direction = Input.get_vector("move_left" , "move_right" , "move_up" , "move_down")
+	if Input.is_action_just_pressed("dash") and dash_access == true :
+		_dash(direction , _delta)
 	collision = player.move_and_collide(player.velocity)
 	if collision :
 		player.playercollision.emit()
+
+func _dash(direction : Vector2 , delta : float) -> void :
+	player.velocity = direction * DASH_SPEED * delta
+	dash_access = false
+	dash_timer.start(0.5)
+
+
+func _dash_access() -> void :
+	player.velocity = Vector2(0 , 0)
+	dash_access = true
+
 
 func _on_collision(_collision_that_happened : KinematicCollision2D) -> void :
 	dash_bubble.queue_free()

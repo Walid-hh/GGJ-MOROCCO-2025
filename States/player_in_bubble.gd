@@ -13,6 +13,7 @@ func enter():
 	player.playercollision.connect(_on_collision.bind(collision))
 	slime_sprite.stop()
 	slime_sprite.play("Idle")
+
 func exit():
 	pass
 
@@ -24,7 +25,6 @@ func physics_update(_delta : float):
 		player.velocity.y = -1
 	var direction = Input.get_axis("move_left" , "move_right")
 	player.velocity.x = direction * SPEED * _delta
-	
 	collision = player.move_and_collide(player.velocity)
 	if collision :
 		player.playercollision.emit()

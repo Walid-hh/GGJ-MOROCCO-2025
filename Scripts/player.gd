@@ -1,7 +1,6 @@
 extends CharacterBody2D
 signal playercollision
 
-
 #const SPEED = 300.0
 #const JUMP_VELOCITY = -400.0
 #
