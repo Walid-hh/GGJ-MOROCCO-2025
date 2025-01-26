@@ -40,9 +40,9 @@ texture = ExtResource("1_30808")
 [node name="play" type="Button" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 242.0
+offset_left = 240.0
 offset_top = 46.0
-offset_right = 390.0
+offset_right = 388.0
 offset_bottom = 116.0
 theme = ExtResource("2_7kqga")
 text = "PLAY"
@@ -50,9 +50,9 @@ text = "PLAY"
 [node name="options" type="Button" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 243.0
+offset_left = 240.0
 offset_top = 127.0
-offset_right = 391.0
+offset_right = 388.0
 offset_bottom = 201.0
 theme = ExtResource("3_gxjuo")
 text = "OPTIONS"
@@ -60,10 +60,10 @@ text = "OPTIONS"
 [node name="exit" type="Button" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = 246.0
-offset_top = 224.0
-offset_right = 392.0
-offset_bottom = 291.0
+offset_left = 240.0
+offset_top = 213.0
+offset_right = 386.0
+offset_bottom = 280.0
 theme = ExtResource("4_bfcu7")
 text = "EXIT
 "
