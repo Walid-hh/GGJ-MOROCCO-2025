@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb4yd65gk7anw"]
+
+[ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="1_8nn6b"]
+[ext_resource type="Theme" path="res://Assets/UI/themes/resume.tres" id="2_kl40s"]
+[ext_resource type="Theme" path="res://Assets/UI/themes/return_to_main_menue.tres" id="3_2gcdl"]
+
+[node name="pause_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8nn6b")
+
+[node name="resume" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 177.0
+offset_top = 93.0
+offset_right = 431.0
+offset_bottom = 160.0
+theme = ExtResource("2_kl40s")
+text = "RESUME"
+
+[node name="return_to_menu" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 178.0
+offset_top = 189.0
+offset_right = 431.0
+offset_bottom = 258.0
+theme = ExtResource("3_2gcdl")
+text = "RETURN TO MENU"
+
+[connection signal="pressed" from="resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="return_to_menu" to="." method="_on_return_to_menu_pressed"]
