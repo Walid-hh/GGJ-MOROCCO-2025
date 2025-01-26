@@ -1,10 +1,10 @@
-[gd_scene load_steps=32 format=3 uid="uid://b6buk2vhxc2fp"]
+[gd_scene load_steps=32 format=3 uid="uid://03ij8wuju0pa"]
 
-[ext_resource type="Texture2D" uid="uid://dp2v5x8jgbtgp" path="res://Assets/enemies/turtle/Attack.png" id="1_ugthd"]
-[ext_resource type="Texture2D" uid="uid://bbxftlti5pxql" path="res://Assets/enemies/turtle/Death.png" id="2_d4h2n"]
-[ext_resource type="Texture2D" uid="uid://frn4n8mqyvcr" path="res://Assets/enemies/turtle/Hurt.png" id="3_yt5we"]
-[ext_resource type="Texture2D" uid="uid://bc0kjneu1g02j" path="res://Assets/enemies/turtle/Idle.png" id="4_3fvs1"]
-[ext_resource type="Texture2D" uid="uid://c3xs15aq32yna" path="res://Assets/enemies/turtle/Walk.png" id="5_iimk7"]
+[ext_resource type="Texture2D" uid="uid://dp2v5x8jgbtgp" path="res://Assets/Enemies/Turtle/Attack.png" id="1_ugthd"]
+[ext_resource type="Texture2D" uid="uid://bbxftlti5pxql" path="res://Assets/Enemies/Turtle/Death.png" id="2_d4h2n"]
+[ext_resource type="Texture2D" uid="uid://frn4n8mqyvcr" path="res://Assets/Enemies/Turtle/Hurt.png" id="3_yt5we"]
+[ext_resource type="Texture2D" uid="uid://bc0kjneu1g02j" path="res://Assets/Enemies/Turtle/Idle.png" id="4_3fvs1"]
+[ext_resource type="Texture2D" uid="uid://c3xs15aq32yna" path="res://Assets/Enemies/Turtle/Walk.png" id="5_iimk7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j8avu"]
 atlas = ExtResource("1_ugthd")

@@ -1,10 +1,10 @@
-[gd_scene load_steps=28 format=3 uid="uid://dpjgq6iwt6xlg"]
+[gd_scene load_steps=28 format=3 uid="uid://887g0t6clw6t"]
 
-[ext_resource type="Texture2D" uid="uid://cntsxtevlmxdi" path="res://Assets/enemies/jellyfish/Attack.png" id="1_ybgi2"]
-[ext_resource type="Texture2D" uid="uid://c7nyxmn4ife4" path="res://Assets/enemies/jellyfish/Death.png" id="2_857q7"]
-[ext_resource type="Texture2D" uid="uid://dvjn6geedynf0" path="res://Assets/enemies/jellyfish/Hurt.png" id="3_le373"]
-[ext_resource type="Texture2D" uid="uid://yawwt64qsm1l" path="res://Assets/enemies/jellyfish/Idle.png" id="4_o1qim"]
-[ext_resource type="Texture2D" uid="uid://bpikuwbvk7onp" path="res://Assets/enemies/jellyfish/Walk.png" id="5_vnm1m"]
+[ext_resource type="Texture2D" uid="uid://cntsxtevlmxdi" path="res://Assets/Enemies/JellyFish/Attack.png" id="1_ybgi2"]
+[ext_resource type="Texture2D" uid="uid://c7nyxmn4ife4" path="res://Assets/Enemies/JellyFish/Death.png" id="2_857q7"]
+[ext_resource type="Texture2D" uid="uid://dvjn6geedynf0" path="res://Assets/Enemies/JellyFish/Hurt.png" id="3_le373"]
+[ext_resource type="Texture2D" uid="uid://yawwt64qsm1l" path="res://Assets/Enemies/JellyFish/Idle.png" id="4_o1qim"]
+[ext_resource type="Texture2D" uid="uid://bpikuwbvk7onp" path="res://Assets/Enemies/JellyFish/Walk.png" id="5_vnm1m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_khsiq"]
 atlas = ExtResource("1_ybgi2")
