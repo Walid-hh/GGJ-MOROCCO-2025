@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yawwt64qsm1l"
-path="res://.godot/imported/Idle.png-6e7af6e8d41283b02a8a2d59d6c28b33.ctex"
+path="res://.godot/imported/Idle.png-a533cf65f1142039055ec03da2190ea2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/enemies/jellyfish/Idle.png"
-dest_files=["res://.godot/imported/Idle.png-6e7af6e8d41283b02a8a2d59d6c28b33.ctex"]
+source_file="res://Assets/Enemies/JellyFish/Idle.png"
+dest_files=["res://.godot/imported/Idle.png-a533cf65f1142039055ec03da2190ea2.ctex"]
 
 [params]
 
