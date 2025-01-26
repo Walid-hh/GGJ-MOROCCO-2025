@@ -12,5 +12,6 @@ position = Vector2(0, 0.375386)
 shape = SubResource("CircleShape2D_7r0sx")
 
 [node name="BubbleSprite" type="Sprite2D" parent="."]
+texture_filter = 1
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_l6sbn")

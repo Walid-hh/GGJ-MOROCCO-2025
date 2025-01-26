@@ -68,10 +68,11 @@ radius = 5.0
 script = ExtResource("1_4uhed")
 
 [node name="SlimeSprite" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_yoa32")
 animation = &"Idle"
 autoplay = "Idle"
-frame_progress = 0.295452
+frame_progress = 0.225323
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 9)

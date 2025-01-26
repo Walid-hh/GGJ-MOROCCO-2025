@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://beunn8jr1a8d2"]
+[gd_scene load_steps=9 format=3 uid="uid://beunn8jr1a8d2"]
 
+[ext_resource type="Script" path="res://Scripts/game.gd" id="1_n0rdd"]
 [ext_resource type="PackedScene" uid="uid://im8hms28x3f7" path="res://Scenes/player.tscn" id="1_wcimc"]
 [ext_resource type="Script" path="res://Scripts/bubble_spawner.gd" id="2_8okrb"]
 [ext_resource type="PackedScene" uid="uid://m78ga2btv7i0" path="res://Scenes/Bubble.tscn" id="2_y1op0"]
 [ext_resource type="PackedScene" uid="uid://c1meriqm20ogh" path="res://Scenes/map.tscn" id="4_0brjd"]
+[ext_resource type="PackedScene" uid="uid://bb4yd65gk7anw" path="res://Scenes/pause_menu.tscn" id="6_0t6bh"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qwipi"]
 distance = 2.0
@@ -12,6 +14,7 @@ distance = 2.0
 size = Vector2(441.5, 20)
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_n0rdd")
 
 [node name="Map" parent="." instance=ExtResource("4_0brjd")]
 position = Vector2(343, 121)
@@ -38,3 +41,10 @@ position = Vector2(251, 35)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(108, 114)
 shape = SubResource("RectangleShape2D_fa22t")
+
+[node name="pause_menu" parent="." instance=ExtResource("6_0t6bh")]
+visible = false
+offset_left = -13.0
+offset_top = -23.0
+offset_right = -13.0
+offset_bottom = -23.0
