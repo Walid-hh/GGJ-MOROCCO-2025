@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4dyekve2oy0a"
-path="res://.godot/imported/Death.png-dd7dfb78eb62c75d3a02a234570c810c.ctex"
+uid="uid://c7nyxmn4ife4"
+path="res://.godot/imported/Death.png-9e1db1ea397c20deb66ea385fb19c51c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Enemies/JellyFish/Death.png"
-dest_files=["res://.godot/imported/Death.png-dd7dfb78eb62c75d3a02a234570c810c.ctex"]
+source_file="res://Assets/enemies/jellyfish/Death.png"
+dest_files=["res://.godot/imported/Death.png-9e1db1ea397c20deb66ea385fb19c51c.ctex"]
 
 [params]
 

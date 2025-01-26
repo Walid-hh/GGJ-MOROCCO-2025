@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0smq7mojt30g"
-path="res://.godot/imported/Walk.png-7c5248cea2a2d8ce76ffb24df92ae54b.ctex"
+uid="uid://c3xs15aq32yna"
+path="res://.godot/imported/Walk.png-c193c3a793113716c58c6baebf76961e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Enemies/Turtle/Walk.png"
-dest_files=["res://.godot/imported/Walk.png-7c5248cea2a2d8ce76ffb24df92ae54b.ctex"]
+source_file="res://Assets/enemies/turtle/Walk.png"
+dest_files=["res://.godot/imported/Walk.png-c193c3a793113716c58c6baebf76961e.ctex"]
 
 [params]
 
