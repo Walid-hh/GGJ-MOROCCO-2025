@@ -248,8 +248,8 @@ initial_state = NodePath("PlayerNormal")
 [node name="PlayerNormal" type="Node" parent="StateMachine"]
 script = ExtResource("4_hxabe")
 
-[node name="PlayerInBubble" type="Node" parent="StateMachine"]
-script = ExtResource("5_a6ckr")
-
 [node name="PlayerInDashBubble" type="Node" parent="StateMachine"]
 script = ExtResource("7_dd4wt")
+
+[node name="PlayerInBubble" type="Node" parent="StateMachine"]
+script = ExtResource("5_a6ckr")

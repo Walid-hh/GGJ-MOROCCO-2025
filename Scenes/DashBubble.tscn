@@ -1,6 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqviebib6xv71"]
+[gd_scene load_steps=6 format=3 uid="uid://bqviebib6xv71"]
 
 [ext_resource type="Texture2D" uid="uid://cyhsxife8n5nj" path="res://Assets/Bubbles/bubble2.png" id="1_6nblx"]
+[ext_resource type="Script" path="res://States/state_machine.gd" id="2_jseic"]
+[ext_resource type="Script" path="res://Scripts/dash_bubble_empty.gd" id="3_a8h5q"]
+[ext_resource type="Script" path="res://Scripts/dash_bubble_full.gd" id="4_vnbi4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1h5hs"]
 radius = 8.0
@@ -14,3 +17,13 @@ shape = SubResource("CircleShape2D_1h5hs")
 position = Vector2(0, -1)
 scale = Vector2(0.609375, 0.5625)
 texture = ExtResource("1_6nblx")
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("2_jseic")
+initial_state = NodePath("DashBubbleEmpty")
+
+[node name="DashBubbleEmpty" type="Node" parent="StateMachine"]
+script = ExtResource("3_a8h5q")
+
+[node name="DashBubbleFull" type="Node" parent="StateMachine"]
+script = ExtResource("4_vnbi4")

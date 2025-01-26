@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn3kadw2yl7gr"]
+
+[ext_resource type="Script" path="res://Scripts/dash_bubble_spawner.gd" id="1_78ysx"]
+[ext_resource type="PackedScene" uid="uid://bqviebib6xv71" path="res://Scenes/DashBubble.tscn" id="2_1vs66"]
+
+[node name="DashBubbleSpawner" type="Node2D"]
+script = ExtResource("1_78ysx")
+
+[node name="DashBubble" parent="." instance=ExtResource("2_1vs66")]

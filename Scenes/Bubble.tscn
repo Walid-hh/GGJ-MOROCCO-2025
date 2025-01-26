@@ -1,6 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://m78ga2btv7i0"]
+[gd_scene load_steps=6 format=3 uid="uid://m78ga2btv7i0"]
 
 [ext_resource type="Texture2D" uid="uid://b6s4uyce1hwg" path="res://Assets/Bubbles/bubble.png" id="1_l6sbn"]
+[ext_resource type="Script" path="res://States/state_machine.gd" id="3_bpqvg"]
+[ext_resource type="Script" path="res://States/bubble_empty.gd" id="4_d8yvu"]
+[ext_resource type="Script" path="res://States/bubble_full.gd" id="5_0xa1v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7r0sx"]
 radius = 9.0
@@ -14,3 +17,13 @@ shape = SubResource("CircleShape2D_7r0sx")
 [node name="BubbleSprite" type="Sprite2D" parent="."]
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_l6sbn")
+
+[node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
+script = ExtResource("3_bpqvg")
+initial_state = NodePath("BubbleEmpty")
+
+[node name="BubbleEmpty" type="Node" parent="StateMachine"]
+script = ExtResource("4_d8yvu")
+
+[node name="BubbleFull" type="Node" parent="StateMachine"]
+script = ExtResource("5_0xa1v")
