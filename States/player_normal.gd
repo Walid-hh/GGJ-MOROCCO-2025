@@ -4,9 +4,11 @@ class_name PlayerNormal
 @onready var slime_sprite: AnimatedSprite2D = $"../../SlimeSprite"
 @onready var bubble: Area2D = $"../../../BubbleSpawner/Bubble"
 #@onready var dash_bubble: Area2D = $"../../../BubbleSpawner/DashBubble"
-
-const SPEED = 100
+const ACCELERATION = 8000
+const DECELERATION = 800 
+const SPEED = 200
 const JUMP_VELOCITY = -300.0
+var desired_velocity : Vector2
 
 func enter():
 
@@ -25,10 +27,11 @@ func physics_update(delta: float) -> void:
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("move_left", "move_right")
+	desired_velocity.x = direction * SPEED
 	if direction:
-		player.velocity.x = direction * SPEED
+		player.velocity.x = move_toward(0 ,desired_velocity.x , ACCELERATION * delta )
 	else:
-		player.velocity.x = move_toward(player.velocity.x, 0, SPEED)
+		player.velocity.x = move_toward(player.velocity.x, 0, DECELERATION * delta)
 
 	player.move_and_slide()
 

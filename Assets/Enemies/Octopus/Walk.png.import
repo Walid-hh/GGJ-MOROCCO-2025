@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bhne1j12sdopk"
-path="res://.godot/imported/Walk.png-7068dd0e5467c770dbd36bf7bc1fa7ea.ctex"
+path="res://.godot/imported/Walk.png-b2b56b7fc01dfb852cf017331f5ce2c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Enemies/Octopus/Walk.png"
-dest_files=["res://.godot/imported/Walk.png-7068dd0e5467c770dbd36bf7bc1fa7ea.ctex"]
+source_file="res://Assets/enemies/Octopus/Walk.png"
+dest_files=["res://.godot/imported/Walk.png-b2b56b7fc01dfb852cf017331f5ce2c0.ctex"]
 
 [params]
 

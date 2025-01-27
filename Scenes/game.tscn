@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=3 uid="uid://beunn8jr1a8d2"]
 
-[ext_resource type="PackedScene" uid="uid://im8hms28x3f7" path="res://Scenes/Slime.tscn" id="1_wcimc"]
-[ext_resource type="PackedScene" uid="uid://clehpvlgyuia1" path="res://Scenes/bubble_spawner.tscn" id="2_hgkx7"]
-[ext_resource type="PackedScene" uid="uid://dn3kadw2yl7gr" path="res://Scenes/dash_bubble_spawner.tscn" id="3_4qr8f"]
+[ext_resource type="PackedScene" path="res://Scenes/Slime.tscn" id="1_wcimc"]
+[ext_resource type="PackedScene" uid="uid://c281bmtdlthrw" path="res://Scenes/bubble_spawner.tscn" id="2_hgkx7"]
+[ext_resource type="PackedScene" path="res://Scenes/dash_bubble_spawner.tscn" id="3_4qr8f"]
 [ext_resource type="PackedScene" uid="uid://cd4uyerogl5c8" path="res://Scenes/ui.tscn" id="4_ga74p"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qwipi"]
@@ -14,6 +14,14 @@ size = Vector2(307, 20)
 
 [node name="Player" parent="." instance=ExtResource("1_wcimc")]
 position = Vector2(287, 216)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="UI" parent="Player" instance=ExtResource("4_ga74p")]
+offset_left = -262.0
+offset_top = -140.0
+offset_right = -262.0
+offset_bottom = -140.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(287, 230)
@@ -38,5 +46,3 @@ position = Vector2(369, 180)
 
 [node name="DashBubbleSpawner2" parent="." instance=ExtResource("3_4qr8f")]
 position = Vector2(161, 172)
-
-[node name="UI" parent="." instance=ExtResource("4_ga74p")]

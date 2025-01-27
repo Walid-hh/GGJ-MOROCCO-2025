@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvjn6geedynf0"
-path="res://.godot/imported/Hurt.png-40044e07bfd0cdae5d4efabd48af32af.ctex"
+path="res://.godot/imported/Hurt.png-bbdca709f24a9ecae607b85afea6bf15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Enemies/JellyFish/Hurt.png"
-dest_files=["res://.godot/imported/Hurt.png-40044e07bfd0cdae5d4efabd48af32af.ctex"]
+source_file="res://Assets/enemies/jellyfish/Hurt.png"
+dest_files=["res://.godot/imported/Hurt.png-bbdca709f24a9ecae607b85afea6bf15.ctex"]
 
 [params]
 

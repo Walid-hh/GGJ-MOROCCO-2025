@@ -17,8 +17,7 @@ func _process(delta: float) -> void:
 			_spawn_bubble()
 
 func _spawn_bubble() -> void:
-	# Choose between bubble_scene and bubble2_scene (you can randomize or alternate based on a condition)
-	#var selected_bubble_scene : PackedScene = randf_range(0, 1) > 0.5 ? bubble_scene : bubble2_scene
+
 	
 	var bubble_instance = bubble_scene.instantiate()
 	bubble_instance.position = bubble_initial_position

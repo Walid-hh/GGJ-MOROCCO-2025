@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://clehpvlgyuia1"]
+[gd_scene load_steps=3 format=3 uid="uid://c281bmtdlthrw"]
 
 [ext_resource type="Script" path="res://Scripts/bubble_spawner.gd" id="1_n0xa8"]
 [ext_resource type="PackedScene" uid="uid://m78ga2btv7i0" path="res://Scenes/Bubble.tscn" id="2_sop1v"]

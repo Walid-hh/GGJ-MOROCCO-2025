@@ -1,6 +1,6 @@
 extends CharacterBody2D
 signal playercollision
-@onready var ui: Control = $"../UI"
+@onready var ui: Control = $"UI"
 
 var initial_y_position : float
 var score = 0

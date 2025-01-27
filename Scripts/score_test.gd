@@ -1,6 +1,6 @@
 extends Control
 @onready var label: Label = $Label
-@onready var player: CharacterBody2D = $"../Player"
+@onready var player: CharacterBody2D = $".."
 
 
 
