@@ -64,7 +64,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_kpl8n"]
 radius = 5.0
 
-[node name="Slime" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D"]
 script = ExtResource("1_4uhed")
 
 [node name="SlimeSprite" type="AnimatedSprite2D" parent="."]

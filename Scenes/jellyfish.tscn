@@ -1,10 +1,11 @@
-[gd_scene load_steps=28 format=3 uid="uid://887g0t6clw6t"]
+[gd_scene load_steps=29 format=3 uid="uid://887g0t6clw6t"]
 
-[ext_resource type="Texture2D" uid="uid://cntsxtevlmxdi" path="res://Assets/Enemies/JellyFish/Attack.png" id="1_ybgi2"]
-[ext_resource type="Texture2D" uid="uid://c7nyxmn4ife4" path="res://Assets/Enemies/JellyFish/Death.png" id="2_857q7"]
-[ext_resource type="Texture2D" uid="uid://dvjn6geedynf0" path="res://Assets/Enemies/JellyFish/Hurt.png" id="3_le373"]
-[ext_resource type="Texture2D" uid="uid://yawwt64qsm1l" path="res://Assets/Enemies/JellyFish/Idle.png" id="4_o1qim"]
-[ext_resource type="Texture2D" uid="uid://bpikuwbvk7onp" path="res://Assets/Enemies/JellyFish/Walk.png" id="5_vnm1m"]
+[ext_resource type="Script" path="res://Scripts/jellyfish.gd" id="1_j1bqb"]
+[ext_resource type="Texture2D" uid="uid://cntsxtevlmxdi" path="res://Assets/Enemies/jellyfish/Attack.png" id="1_ybgi2"]
+[ext_resource type="Texture2D" uid="uid://c7nyxmn4ife4" path="res://Assets/Enemies/jellyfish/Death.png" id="2_857q7"]
+[ext_resource type="Texture2D" uid="uid://dvjn6geedynf0" path="res://Assets/Enemies/jellyfish/Hurt.png" id="3_le373"]
+[ext_resource type="Texture2D" uid="uid://yawwt64qsm1l" path="res://Assets/Enemies/jellyfish/Idle.png" id="4_o1qim"]
+[ext_resource type="Texture2D" uid="uid://bpikuwbvk7onp" path="res://Assets/Enemies/jellyfish/Walk.png" id="5_vnm1m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_khsiq"]
 atlas = ExtResource("1_ybgi2")
@@ -177,15 +178,16 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_75wk8"]
 radius = 8.06226
 
-[node name="Node2D" type="Node2D"]
+[node name="jellyfish" type="Area2D"]
+script = ExtResource("1_j1bqb")
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Area2D"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(58, 53)
 sprite_frames = SubResource("SpriteFrames_6xanf")
 animation = &"attack_jelly"
-frame_progress = 0.0107676
+autoplay = "attack_jelly"
+frame_progress = 0.134575
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(1, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(59, 55)
 shape = SubResource("CircleShape2D_75wk8")

@@ -1,16 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://beunn8jr1a8d2"]
+[gd_scene load_steps=9 format=3 uid="uid://beunn8jr1a8d2"]
 
-[ext_resource type="PackedScene" path="res://Scenes/Slime.tscn" id="1_wcimc"]
+[ext_resource type="Script" path="res://Scripts/jellyfish.gd" id="1_1qn10"]
+[ext_resource type="PackedScene" uid="uid://im8hms28x3f7" path="res://Scenes/Slime.tscn" id="1_wcimc"]
 [ext_resource type="PackedScene" uid="uid://c281bmtdlthrw" path="res://Scenes/bubble_spawner.tscn" id="2_hgkx7"]
-[ext_resource type="PackedScene" path="res://Scenes/dash_bubble_spawner.tscn" id="3_4qr8f"]
+[ext_resource type="PackedScene" uid="uid://dn3kadw2yl7gr" path="res://Scenes/dash_bubble_spawner.tscn" id="3_4qr8f"]
 [ext_resource type="PackedScene" uid="uid://cd4uyerogl5c8" path="res://Scenes/ui.tscn" id="4_ga74p"]
+[ext_resource type="PackedScene" uid="uid://03ij8wuju0pa" path="res://Scenes/turtle.tscn" id="6_srsy4"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qwipi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xdfsn"]
 size = Vector2(307, 20)
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Area2D"]
+script = ExtResource("1_1qn10")
 
 [node name="Player" parent="." instance=ExtResource("1_wcimc")]
 position = Vector2(287, 216)
@@ -46,3 +49,6 @@ position = Vector2(369, 175)
 
 [node name="DashBubbleSpawner2" parent="." instance=ExtResource("3_4qr8f")]
 position = Vector2(197, 175)
+
+[node name="turtle" parent="." instance=ExtResource("6_srsy4")]
+position = Vector2(24, 32)

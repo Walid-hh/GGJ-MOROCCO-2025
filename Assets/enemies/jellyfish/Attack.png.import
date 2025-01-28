@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cntsxtevlmxdi"
-path="res://.godot/imported/Attack.png-6cd5136fd5ac8473f233563d80cd00d0.ctex"
+path="res://.godot/imported/Attack.png-457174343d8086e61ae395dd3c350e6b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/enemies/jellyfish/Attack.png"
-dest_files=["res://.godot/imported/Attack.png-6cd5136fd5ac8473f233563d80cd00d0.ctex"]
+source_file="res://Assets/Enemies/jellyfish/Attack.png"
+dest_files=["res://.godot/imported/Attack.png-457174343d8086e61ae395dd3c350e6b.ctex"]
 
 [params]
 

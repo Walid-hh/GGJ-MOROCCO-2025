@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c7nyxmn4ife4"
-path="res://.godot/imported/Death.png-9e1db1ea397c20deb66ea385fb19c51c.ctex"
+path="res://.godot/imported/Death.png-71ff66ebcb4ce359f8b7b3c8b05ace6a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/enemies/jellyfish/Death.png"
-dest_files=["res://.godot/imported/Death.png-9e1db1ea397c20deb66ea385fb19c51c.ctex"]
+source_file="res://Assets/Enemies/jellyfish/Death.png"
+dest_files=["res://.godot/imported/Death.png-71ff66ebcb4ce359f8b7b3c8b05ace6a.ctex"]
 
 [params]
 
