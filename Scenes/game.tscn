@@ -30,19 +30,19 @@ position = Vector2(287, 230)
 shape = SubResource("WorldBoundaryShape2D_qwipi")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
-position = Vector2(312, 54)
+position = Vector2(290, 55)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 shape = SubResource("RectangleShape2D_xdfsn")
 
 [node name="BubbleSpawner" parent="." instance=ExtResource("2_hgkx7")]
-position = Vector2(317, 177)
+position = Vector2(317, 175)
 
 [node name="BubbleSpawner2" parent="." instance=ExtResource("2_hgkx7")]
-position = Vector2(204, 173)
+position = Vector2(260, 175)
 
 [node name="DashBubbleSpawner" parent="." instance=ExtResource("3_4qr8f")]
-position = Vector2(369, 180)
+position = Vector2(369, 175)
 
 [node name="DashBubbleSpawner2" parent="." instance=ExtResource("3_4qr8f")]
-position = Vector2(161, 172)
+position = Vector2(197, 175)
