@@ -1,54 +1,67 @@
-[gd_scene load_steps=9 format=3 uid="uid://beunn8jr1a8d2"]
+[gd_scene load_steps=11 format=3 uid="uid://beunn8jr1a8d2"]
 
 [ext_resource type="Script" path="res://Scripts/jellyfish.gd" id="1_1qn10"]
 [ext_resource type="PackedScene" uid="uid://im8hms28x3f7" path="res://Scenes/Slime.tscn" id="1_wcimc"]
 [ext_resource type="PackedScene" uid="uid://c281bmtdlthrw" path="res://Scenes/bubble_spawner.tscn" id="2_hgkx7"]
+[ext_resource type="PackedScene" uid="uid://c1meriqm20ogh" path="res://Scenes/map.tscn" id="2_sfvl8"]
 [ext_resource type="PackedScene" uid="uid://dn3kadw2yl7gr" path="res://Scenes/dash_bubble_spawner.tscn" id="3_4qr8f"]
 [ext_resource type="PackedScene" uid="uid://cd4uyerogl5c8" path="res://Scenes/ui.tscn" id="4_ga74p"]
 [ext_resource type="PackedScene" uid="uid://03ij8wuju0pa" path="res://Scenes/turtle.tscn" id="6_srsy4"]
+[ext_resource type="PackedScene" uid="uid://bv6deai14nhj0" path="res://Scenes/parallax_background.tscn" id="8_blmu6"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qwipi"]
+distance = 274.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xdfsn"]
-size = Vector2(307, 20)
+size = Vector2(807, 20)
 
 [node name="Game" type="Area2D"]
+position = Vector2(-100, -1775)
 script = ExtResource("1_1qn10")
 
+[node name="Map" parent="." instance=ExtResource("2_sfvl8")]
+
 [node name="Player" parent="." instance=ExtResource("1_wcimc")]
-position = Vector2(287, 216)
+position = Vector2(214, 1686)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(1, 16)
+zoom = Vector2(1.5, 1.5)
 
 [node name="UI" parent="Player" instance=ExtResource("4_ga74p")]
 offset_left = -262.0
 offset_top = -140.0
 offset_right = -262.0
 offset_bottom = -140.0
+metadata/_edit_use_anchors_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(287, 230)
+position = Vector2(192, 1625)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(23, 351)
 shape = SubResource("WorldBoundaryShape2D_qwipi")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 position = Vector2(290, 55)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(-177, -28)
 shape = SubResource("RectangleShape2D_xdfsn")
 
 [node name="BubbleSpawner" parent="." instance=ExtResource("2_hgkx7")]
-position = Vector2(317, 175)
+position = Vector2(208, 1519)
 
 [node name="BubbleSpawner2" parent="." instance=ExtResource("2_hgkx7")]
-position = Vector2(260, 175)
+position = Vector2(208, 1641)
 
 [node name="DashBubbleSpawner" parent="." instance=ExtResource("3_4qr8f")]
-position = Vector2(369, 175)
+position = Vector2(292, 1547)
 
 [node name="DashBubbleSpawner2" parent="." instance=ExtResource("3_4qr8f")]
-position = Vector2(197, 175)
+position = Vector2(15, 1519)
 
 [node name="turtle" parent="." instance=ExtResource("6_srsy4")]
-position = Vector2(24, 32)
+position = Vector2(-204, 1403)
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("8_blmu6")]

@@ -40,5 +40,5 @@ func _on_turtle_body_entered(body: Node) -> void:
 		print("turtle hit player")
 		emit_signal("turtle_hit_player")
 		# Optional: Destroy the bubble directly from the turtle script
-		if body.has_method("pop_bubble"):  # Assuming the player has a `pop_bubble()` method
-			body.pop_bubble()
+		if body.has_method("pop_bubble"):  # Assuming the player has a pop_bubble() method
+			body.pop_bubble() 

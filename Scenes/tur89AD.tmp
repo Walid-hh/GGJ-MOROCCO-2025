@@ -204,10 +204,13 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_kmlko"]
-radius = 15.0
+radius = 31.0644
 
-[node name="turtle" type="Area2D"]
+[node name="turtle" type="RigidBody2D"]
 script = ExtResource("1_oiiox")
+speed = null
+direction = null
+move_range = null
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(137.25, 106.5)
@@ -215,7 +218,7 @@ scale = Vector2(1.11458, 1.52083)
 sprite_frames = SubResource("SpriteFrames_epsg6")
 animation = &"attack_turtle"
 autoplay = "attack_turtle"
-frame_progress = 0.621069
+frame_progress = 0.956536
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(134, 109)
