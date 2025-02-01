@@ -4,6 +4,7 @@ class_name DashBubblleEmpty
 @onready var player: CharacterBody2D = $"../../../../Player"
 @onready var player_normal : State = $"../../../../Player/StateMachine/PlayerNormal"
 @onready var dash_bubble_spawner: Node2D = $"../../.."
+@onready var bubble_enter: AudioStreamPlayer = $"../../BubbleEnter"
 var dash_bubble_initial_pos : Vector2
 var tween : Tween
 # Called when the node enters the scene tree for the first time.
@@ -18,6 +19,7 @@ func _ready() -> void:
 
 func _slime_entered_dash_bubble(_body_that_entered : CharacterBody2D) -> void :
 	print("slime_entered")
+	bubble_enter.play()
 	tween.kill()
 	dash_bubble.position = dash_bubble_initial_pos
 	#removing the signal before changing states

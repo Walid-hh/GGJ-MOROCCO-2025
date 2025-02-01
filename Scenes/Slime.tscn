@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://im8hms28x3f7"]
+[gd_scene load_steps=39 format=3 uid="uid://c0uk8tvdvdlpg"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_4uhed"]
 [ext_resource type="Texture2D" uid="uid://8be67cg0xb3q" path="res://Assets/Slime/slime idle.png" id="1_lxhao"]
@@ -234,12 +234,13 @@ script = ExtResource("1_4uhed")
 sprite_frames = SubResource("SpriteFrames_yoa32")
 animation = &"jump"
 autoplay = "Idle"
-frame = 22
-frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 9)
 shape = SubResource("CircleShape2D_kpl8n")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+target_position = Vector2(0, 20.205)
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_state")]
 script = ExtResource("3_mufe4")

@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://m78ga2btv7i0"]
+[gd_scene load_steps=8 format=3 uid="uid://m78ga2btv7i0"]
 
 [ext_resource type="Texture2D" uid="uid://b6s4uyce1hwg" path="res://Assets/Bubbles/bubble.png" id="1_l6sbn"]
 [ext_resource type="Script" path="res://States/state_machine.gd" id="3_bpqvg"]
 [ext_resource type="Script" path="res://States/bubble_empty.gd" id="4_d8yvu"]
 [ext_resource type="Script" path="res://States/bubble_full.gd" id="5_0xa1v"]
+[ext_resource type="AudioStream" uid="uid://c03a6k0skckyi" path="res://Assets/audio/bubble_enter.mp3" id="5_7nn7w"]
+[ext_resource type="AudioStream" uid="uid://bwi3oh8lg0ufc" path="res://Assets/audio/bubble-sound-43207.mp3" id="6_2kpij"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7r0sx"]
 radius = 9.0
@@ -27,3 +29,9 @@ script = ExtResource("4_d8yvu")
 
 [node name="BubbleFull" type="Node" parent="StateMachine"]
 script = ExtResource("5_0xa1v")
+
+[node name="BubbleEnter" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_2kpij")
+
+[node name="BubblePop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_7nn7w")

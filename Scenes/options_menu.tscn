@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://fekcno6b6fiu"]
+
+[ext_resource type="Script" path="res://Scripts/options_menu.gd" id="1_3lapx"]
+[ext_resource type="Texture2D" uid="uid://bynl1ycwyk65g" path="res://Assets/map/Back.png" id="2_lg1t3"]
+[ext_resource type="Theme" uid="uid://duc7wivam6khy" path="res://Assets/Themes/volume.tres" id="3_tf1iq"]
+[ext_resource type="Theme" uid="uid://xee16p2p4nt8" path="res://Assets/Themes/back.tres" id="4_x5whb"]
+
+[node name="options menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3lapx")
+
+[node name="Back" type="Sprite2D" parent="."]
+position = Vector2(322.5, 161)
+scale = Vector2(1.91369, 1.325)
+texture = ExtResource("2_lg1t3")
+
+[node name="volume" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 250.0
+offset_top = 87.0
+offset_right = 381.0
+offset_bottom = 152.0
+theme = ExtResource("3_tf1iq")
+text = "VOLUME"
+
+[node name="back" type="Button" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 250.0
+offset_top = 188.0
+offset_right = 382.0
+offset_bottom = 260.0
+theme = ExtResource("4_x5whb")
+text = "BACK"
+
+[connection signal="pressed" from="volume" to="." method="_on_volume_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

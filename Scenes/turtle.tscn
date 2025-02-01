@@ -1,11 +1,11 @@
 [gd_scene load_steps=33 format=3 uid="uid://03ij8wuju0pa"]
 
 [ext_resource type="Script" path="res://Scripts/turtle.gd" id="1_oiiox"]
-[ext_resource type="Texture2D" uid="uid://dp2v5x8jgbtgp" path="res://Assets/Enemies/turtle/Attack.png" id="1_ugthd"]
-[ext_resource type="Texture2D" uid="uid://bbxftlti5pxql" path="res://Assets/Enemies/turtle/Death.png" id="2_d4h2n"]
-[ext_resource type="Texture2D" uid="uid://frn4n8mqyvcr" path="res://Assets/Enemies/turtle/Hurt.png" id="3_yt5we"]
-[ext_resource type="Texture2D" uid="uid://bc0kjneu1g02j" path="res://Assets/Enemies/turtle/Idle.png" id="4_3fvs1"]
-[ext_resource type="Texture2D" uid="uid://c3xs15aq32yna" path="res://Assets/Enemies/turtle/Walk.png" id="5_iimk7"]
+[ext_resource type="Texture2D" uid="uid://dp2v5x8jgbtgp" path="res://Assets/enemies/turtle/Attack.png" id="1_ugthd"]
+[ext_resource type="Texture2D" uid="uid://bbxftlti5pxql" path="res://Assets/enemies/turtle/Death.png" id="2_d4h2n"]
+[ext_resource type="Texture2D" uid="uid://frn4n8mqyvcr" path="res://Assets/enemies/turtle/Hurt.png" id="3_yt5we"]
+[ext_resource type="Texture2D" uid="uid://bc0kjneu1g02j" path="res://Assets/enemies/turtle/Idle.png" id="4_3fvs1"]
+[ext_resource type="Texture2D" uid="uid://c3xs15aq32yna" path="res://Assets/enemies/turtle/Walk.png" id="5_iimk7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j8avu"]
 atlas = ExtResource("1_ugthd")
@@ -203,14 +203,13 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_kmlko"]
-radius = 15.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uqjxm"]
+size = Vector2(31.135, 20)
 
-[node name="turtle" type="Area2D"]
+[node name="turtle" type="CharacterBody2D"]
 script = ExtResource("1_oiiox")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(137.25, 106.5)
 scale = Vector2(1.11458, 1.52083)
 sprite_frames = SubResource("SpriteFrames_epsg6")
 animation = &"attack_turtle"
@@ -218,5 +217,4 @@ autoplay = "attack_turtle"
 frame_progress = 0.621069
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(134, 109)
-shape = SubResource("CircleShape2D_kmlko")
+shape = SubResource("RectangleShape2D_uqjxm")

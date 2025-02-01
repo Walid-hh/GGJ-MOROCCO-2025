@@ -21,7 +21,7 @@ func enter():
 
 func physics_update(_delta : float):
 	if !player.is_on_floor():
-		player.velocity = Vector2(0 , -1)
+		player.velocity = Vector2(0 , -2)
 		direction.x = Input.get_axis("move_left" , "move_right")
 	if Input.is_action_just_pressed("dash") and dash_access == true:
 		is_dashing = true

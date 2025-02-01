@@ -4,6 +4,7 @@ class_name BubbleEmpty
 @onready var player: CharacterBody2D = $"../../../../Player"
 @onready var player_normal : State = $"../../../../Player/StateMachine/PlayerNormal"
 @onready var bubble_spawner: Node2D = $"../../.."
+@onready var bubble_enter: AudioStreamPlayer = $"../../BubbleEnter"
 var tween : Tween
 var bubble_initial_pos : Vector2
 # Called when the node enters the scene tree for the first time.
@@ -19,6 +20,7 @@ func enter():
 func _slime_entered_bubble(_body_that_entered : CharacterBody2D) -> void :
 	print("slime_entered")
 	tween.kill()
+	bubble_enter.play()
 	bubble.position = bubble_initial_pos
 	#removing the signal before changing states
 	bubble.body_entered.disconnect(_slime_entered_bubble)
